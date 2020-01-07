@@ -71,15 +71,25 @@ Header
 Panier
 */
     #shoppingBag {
-        display: none;
         position: absolute;
         right: 0;
-        top: 110%;
+        top: -1000%;
         background: #eee;
         padding: 3rem;
+        opacity: 0;
+
+        -moz-transition: opacity .3s;
+        -o-transition: opacity .3s;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
     }
 
     #shoppingBag.open{
-        display: initial;
+        top: 110%;
+        opacity: 1;
+    }
+
+    #shoppingBag.open.close{
+        opacity: 0;
     }
 /**/

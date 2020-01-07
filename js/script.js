@@ -20,8 +20,17 @@ Attendre le chargement du DOM
                 Vérifier l'état du panier
                 */
                     if(bagIsOpen === true){
-                        // Supprimer la class .open a #shoppingBag
-                        shoppingBag.classList.remove('open');
+                        // Ajouter la class .close
+                        shoppingBag.classList.add('close');
+
+                        // Attendre .3s
+                        setTimeout(() => {
+                            // Supprimer la class .open a #shoppingBag
+                            shoppingBag.classList.remove('open');
+                            // Supprimer la class .close a #shoppingBag
+                            shoppingBag.classList.remove('close');
+                        }, 300)
+
                     }
                     else{
                         // Ajouter la class .open a #shoppingBag
