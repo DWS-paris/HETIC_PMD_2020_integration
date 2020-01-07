@@ -39,14 +39,44 @@ Global
 */
     header, main, footer{
         padding: 3rem;
+        max-width: 95rem;
+        margin: auto;
+    }
+/**/
+
+/* 
+Header
+*/
+    header{
+        border: .5rem solid #eee;
+        position: relative; /* bloquer les enfants dans le parent */
+    }
+
+    nav{
+        text-align: right;
+        position: relative; /* bloquer les enfants dans le parent */
+    }
+
+    nav li{
+        display: inline-block;
+    }
+
+    nav li:first-of-type{
+        position: absolute;
+        left: 0;
     }
 /**/
 
 /* 
 Panier
 */
-    #shoppingBag{
+    #shoppingBag {
         display: none;
+        position: absolute;
+        right: 0;
+        top: 110%;
+        background: #eee;
+        padding: 3rem;
     }
 
     #shoppingBag.open{
