@@ -93,3 +93,24 @@ Panier
         opacity: 0;
     }
 /**/
+
+select {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+
+    /* Supprimer le style de base (flèches) */
+    -webkit-appearance: none;
+    appearance: none;
+
+
+    font-size: 6rem;
+    background-color: blue;
+    color: white;
+    padding: 2rem;
+    background-image: url(https://cdn2.iconfinder.com/data/icons/minimalist-arrows-set/100/ARROW-expand_super_arrow-512.png);
+    background-size: 5rem;
+    background-repeat: no-repeat;
+    background-position: right;
+}
