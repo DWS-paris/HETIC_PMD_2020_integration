@@ -33,3 +33,23 @@ Reset
         max-width: 100%;
     }
 /**/
+
+/* 
+Global
+*/
+    header, main, footer{
+        padding: 3rem;
+    }
+/**/
+
+/* 
+Panier
+*/
+    #shoppingBag{
+        display: none;
+    }
+
+    #shoppingBag.open{
+        display: initial;
+    }
+/**/
