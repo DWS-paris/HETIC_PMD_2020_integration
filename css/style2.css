@@ -1,0 +1,57 @@
+/* 
+Reset
+*/
+    *{
+        /* Supprimer toutes les marges */
+        padding: 0;
+        margin: 0;
+
+        /* Intégrer les padding et les border dans le bloc */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; /* CSS3 */
+    }
+
+    /* Passeer d'une base 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* => 1rem = 10px */
+    }
+
+    body{
+        font-size: 1.6rem;
+    }
+
+    a{
+        color: inherit;
+    }
+
+    a:not([target="_blank"]){
+        text-decoration: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+/**/
+
+form li{
+    display: inline-block;
+}
+
+select {
+    border: none;
+    background: purple;
+    border-radius: 0;
+    color: white;
+    padding: 1rem 2rem 1rem 1rem;
+    background-image: url(../img/arrows.svg);
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 80%;
+
+    /* Supprimer le style de base (flèches) */
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}   
