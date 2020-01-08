@@ -161,3 +161,45 @@ accordeon
 .articleList .open{
     display: initial;
 }
+
+
+
+
+/* 
+CSS shapes
+*/
+    #circle {
+        width: 15rem;
+        height: 15rem;
+        background: red;
+        margin: 4rem auto;
+        
+        -o-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    #triangle{
+        position: relative;
+        width: 20rem;
+        margin: 4rem auto;
+    }
+
+    #triangle div{
+        position: relative;
+        z-index: 1;
+        border-right: 20rem solid transparent;
+        border-left: 20rem solid transparent;
+        border-bottom: 20rem solid red;  
+    }
+
+    #triangle div:last-of-type {
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: blur(1rem);
+        border-bottom-color: black;
+        z-index: 0;
+    }
+/**/
