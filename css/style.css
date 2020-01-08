@@ -32,6 +32,12 @@ Reset
     img{
         max-width: 100%;
     }
+
+    h1{
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 /**/
 
 /* 
@@ -117,4 +123,41 @@ select {
     background-size: 5rem;
     background-repeat: no-repeat;
     background-position: right;
+}
+
+/* 
+accordeon
+*/
+    .accordeon article{
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+    }
+
+    .accordeon.open article{
+        height: 11rem;
+    }
+
+    .accordeon h2{
+        position: relative;
+        cursor: pointer;
+    }
+
+    .accordeon h2::after{
+        content: '+';
+        display: block;
+        float: right;
+    }
+
+    .accordeon.open h2::after{
+        content: '-';
+    }
+/**/
+
+.articleList .large, .articleList .hide{
+    display: none;
+}
+
+.articleList .open{
+    display: initial;
 }

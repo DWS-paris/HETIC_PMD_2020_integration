@@ -9,6 +9,10 @@ Attendre le chargement du DOM
             let bagLink = document.querySelector('#bagLink');
             let shoppingBag = document.querySelector('#shoppingBag');
             let bagIsOpen = false;
+            let accordeonLink = document.querySelectorAll('.accordeon h2');
+            let accordeonContent = document.querySelectorAll('.accordeon');
+            let showMoreLinks = document.querySelectorAll('.showMore')
+            
         //
 
         /* 
@@ -44,6 +48,35 @@ Attendre le chargement du DOM
                     bagIsOpen = !bagIsOpen;
                 //
             }
+
+            const toggleAccordeon = () => {
+                // Faire une boucle sur accordeonLink
+                for( let link of accordeonLink ){
+                    // Capter le clic sur link
+                    link.addEventListener('click', () => {
+
+                        // SUpprimer toutes les class open
+                        for( let content of accordeonContent ){
+                            content.classList.remove('open')
+                        }
+
+                        // Sélectionner la balise parent pour y ajouter la class open
+                        link.parentNode.classList.add('open')
+                    })
+                }
+            }
+
+            const showModeFunction = () => {
+                showMoreLinks.forEach( link => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        link.parentNode.classList.add('hide')
+                        link.parentNode.parentNode.lastElementChild.classList.add('open')
+
+                        console.log(link.parentNode.parentNode.lastChild)
+                    })
+                } )
+            }
         //
     
         /* 
@@ -57,6 +90,9 @@ Attendre le chargement du DOM
                 // Ouvrir/Fermer la panier
                 toggleBag();
             })
+
+            toggleAccordeon();
+            showModeFunction();
         //
     });
 //
